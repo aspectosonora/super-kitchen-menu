@@ -1,0 +1,50 @@
+/*
+!/.gitignore
+!/README.md
+!/vercel.json
+!/preview-hero/
+!/Fotos/
+!/Recursos/
+
+/Fotos/*
+!/Fotos/Foto Cuadrada DIDI/
+/Fotos/Foto Cuadrada DIDI/*
+!/Fotos/Foto Cuadrada DIDI/Teriyaki de pollo.png
+!/Fotos/Foto Cuadrada DIDI/Pechuga Grill.png
+!/Fotos/Foto Cuadrada DIDI/Pasta Verde de Pollo.png
+!/Fotos/Foto Cuadrada DIDI/Ensalada de Pollo.png
+!/Fotos/Foto Cuadrada DIDI/Tiradito de Atún.png
+!/Fotos/Foto Cuadrada DIDI/Bowl de Pollo.png
+!/Fotos/Foto Cuadrada DIDI/Teribowl.png
+!/Fotos/Foto Cuadrada DIDI/Spicy Bowl.png
+!/Fotos/Foto Cuadrada DIDI/Chipotle Bowl.png
+!/Fotos/Foto Cuadrada DIDI/Green Bowl.png
+!/Fotos/Foto Cuadrada DIDI/Bowl de Atún.png
+!/Fotos/Foto Cuadrada DIDI/Bebidas.png
+
+/Recursos/*
+!/Recursos/SK_assets_clickson/
+/Recursos/SK_assets_clickson/*
+!/Recursos/SK_assets_clickson/iconos/
+!/Recursos/SK_assets_clickson/iconos/*
+!/Recursos/SK_assets_clickson/productos/
+/Recursos/SK_assets_clickson/productos/*
+!/Recursos/SK_assets_clickson/productos/pollo-papas-chipotle.webp
+!/Recursos/SK_assets_clickson/productos/ceviche-atun.webp
+!/Recursos/SK_assets_clickson/productos/bebidas.webp
+!/Recursos/SK_assets_clickson/productos/aderezo-chipotle.webp
+!/Recursos/SK_assets_clickson/mascota/
+/Recursos/SK_assets_clickson/mascota/*
+!/Recursos/SK_assets_clickson/mascota/chef-principal.png
+!/Recursos/SK_assets_clickson/marca/
+/Recursos/SK_assets_clickson/marca/*
+!/Recursos/SK_assets_clickson/marca/logo-estrella.png
+!/Recursos/Recursos Externos SK/
+/Recursos/Recursos Externos SK/*
+!/Recursos/Recursos Externos SK/Personaje/
+/Recursos/Recursos Externos SK/Personaje/*
+!/Recursos/Recursos Externos SK/Personaje/Stickers/
+/Recursos/Recursos Externos SK/Personaje/Stickers/*
+!/Recursos/Recursos Externos SK/Personaje/Stickers/12-B.png
+.vercel
+.env*

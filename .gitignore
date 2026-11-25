@@ -46,3 +46,5 @@
 !/Recursos/Recursos Externos SK/Personaje/Stickers/
 /Recursos/Recursos Externos SK/Personaje/Stickers/*
 !/Recursos/Recursos Externos SK/Personaje/Stickers/12-B.png
+.vercel
+.env*
