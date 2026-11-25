@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050705">
+<meta name="description" content="Súper Kitchen — cocina saludable al rescate.">
+<title>Súper Kitchen | Cocina saludable al rescate</title>
+<style>
+@font-face{font-family:Bungee;src:url("./assets/Bungee-Regular.ttf") format("truetype");font-display:swap}
+@font-face{font-family:Bahnschrift;src:url("./assets/Bahnschrift.ttf") format("truetype");font-display:swap}
+:root{--green:#078b3b;--deep:#005426;--yellow:#ffe20a;--black:#050705;--white:#fff;--safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#111;scrollbar-width:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none}
+body{margin:0;color:#090b09;font-family:Bahnschrift,"Arial Narrow",sans-serif;background:#111;overflow-x:hidden}
+main{width:100%;max-width:480px;margin:0 auto;background:var(--yellow);box-shadow:0 0 44px #0005}
+button,a{-webkit-tap-highlight-color:transparent}
+.hero{position:relative;width:100%;height:100svh;min-height:0;max-height:none;overflow:hidden;isolation:isolate;background:var(--yellow)}
+.hero__bg,.hero__wedge,.hero__flare,.hero__logo,.hero__chef,.hero__food-window{position:absolute;pointer-events:none;user-select:none}
+.hero__bg{z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero__wedge{z-index:1;top:0;left:0;width:100%;height:clamp(176px,25svh,220px);background:var(--black);clip-path:polygon(0 0,100% 0,100% 24%,50% 100%,0 24%)}
+.hero__flare{z-index:2;height:auto;object-fit:contain}
+.hero__flare--left{width:clamp(66px,20vw,88px);left:5.5%;top:27.3%}
+.hero__flare--right{width:clamp(70px,22vw,96px);right:5.2%;top:26.4%}
+.hero__nav{position:fixed;z-index:10;top:0;left:50%;transform:translateX(-50%);width:min(100%,480px);height:calc(64px + var(--safe-top));padding:var(--safe-top) 16px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:var(--black);color:white;box-shadow:0 4px 18px #00190c22}
+.icon-btn{justify-self:start;width:46px;height:46px;display:grid;place-items:center;border:0;background:transparent;color:#fff;border-radius:12px;cursor:pointer}
+.icon-btn svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.nav__account{grid-column:3;justify-self:end;text-decoration:none;color:white;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:12px;font-weight:700;line-height:1.05}
+.nav__account svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:2}
+.nav__brand{grid-column:2;position:relative;left:auto;top:auto;z-index:11;justify-self:center;width:126px;height:56px;max-height:none;object-fit:contain;transform:none;filter:drop-shadow(0 2px 2px #0005);animation:header-logo-in .38s .08s both cubic-bezier(.16,1.1,.3,1)}
+.hero__logo{z-index:4;top:calc(64px + var(--safe-top) + 8px);left:50%;width:66%;max-width:290px;max-height:22svh;height:auto;object-fit:contain;transform:translateX(-50%);filter:drop-shadow(0 5px 0 #0003);animation:logo-in .42s .08s both cubic-bezier(.16,1.1,.3,1)}
+.hero__chef{z-index:3;width:86%;height:56%;max-height:56%;object-fit:contain;object-position:center bottom;left:50%;top:22.5%;transform:translateX(-50%);animation:chef-in .62s .18s both cubic-bezier(.2,.8,.2,1)}
+.hero__food-window{z-index:5;inset:58% 0 calc(94px + var(--safe-bottom));overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 78%,transparent 100%)}
+.hero__food{position:absolute;left:50%;top:-20px;width:108%;max-width:none;height:auto;transform:translateX(-50%);translate:0 0;filter:drop-shadow(0 16px 17px #003d1e55);animation:photo-in .58s .30s both cubic-bezier(.2,.8,.2,1),food-float 6s 1.15s ease-in-out infinite alternate}
+.hero__actions{position:absolute;z-index:6;left:50%;bottom:calc(16px + var(--safe-bottom));transform:translateX(-50%);width:82%;max-width:370px;display:flex;flex-direction:column;align-items:center;gap:5px;animation:actions-in .42s .48s both cubic-bezier(.2,.8,.2,1)}
+.cta{display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:999px;text-decoration:none;text-align:center;transition:transform .18s ease,filter .18s ease}
+.cta:active{transform:scale(.97)}
+.cta--menu{width:100%;border:3px solid var(--black);background:var(--yellow);color:var(--black);font-family:Bungee,sans-serif;font-size:clamp(18px,7vw,30px);box-shadow:0 4px 0 #000;gap:15px}
+.cta--menu svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.cta--wa{width:88%;min-height:48px;border:2px solid var(--green);background:white;color:#151815;font-size:18px;font-weight:800;line-height:1.04;gap:9px}
+.cta--wa svg{width:34px;height:34px;fill:var(--green)}
+.hero__explore{color:#fff;text-decoration:none;text-transform:uppercase;font-family:Bahnschrift,sans-serif;font-size:20px;font-style:italic;font-weight:800;letter-spacing:.02em;line-height:1.05;text-shadow:0 2px 2px #003b1b;text-align:center}
+.scroll-arrows{display:flex;flex-direction:column;align-items:center;height:34px;margin-top:2px}
+.scroll-arrows svg{display:block;width:28px;height:17px;overflow:visible;fill:none;stroke:var(--yellow);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 0 #05752c);animation:arrow-down 1.05s ease-in-out infinite alternate}
+.scroll-arrows svg:nth-child(2){animation-delay:.16s}
+.catalog-next{min-height:70vh;padding:52px 20px 80px;background:#fff;text-align:center;scroll-margin-top:0}
+.catalog-next__eyebrow{font:12px Bungee,sans-serif;color:var(--green);letter-spacing:.08em}
+.catalog-next h2{font:clamp(30px,8vw,64px)/.98 Bungee,sans-serif;margin:8px auto 12px}
+.catalog-next p{max-width:540px;margin:0 auto;color:#434943;font-size:18px;line-height:1.4}
+@keyframes logo-in{from{opacity:0;transform:translate(-50%,-8px) scale(.97)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
+@keyframes header-logo-in{from{opacity:0;scale:.94}to{opacity:1;scale:1}}
+@keyframes chef-in{from{opacity:0;transform:translate(-50%,32px) scale(.98)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
+@keyframes photo-in{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@keyframes food-float{from{translate:0 0}to{translate:0 -4px}}
+@keyframes actions-in{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes arrow-down{from{transform:translateY(-2px);opacity:.58}to{transform:translateY(4px);opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+<link rel="stylesheet" href="./catalog.css">
+</head>
+<body>
+<main>
+<section class="hero" id="inicio" aria-label="Bienvenida a Súper Kitchen">
+<img class="hero__bg" src="./assets/fondo.svg" alt="" fetchpriority="high">
+<div class="hero__wedge" aria-hidden="true"></div>
+<img class="hero__flare hero__flare--left" src="./assets/destellos_izquierda.svg" alt="">
+<img class="hero__flare hero__flare--right" src="./assets/destellos_derecha.svg" alt="">
+<header class="hero__nav" id="app-header">
+<button class="icon-btn" aria-label="Abrir navegación" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<img class="nav__brand" src="./assets/logo-estrella-tagline.png" alt="Súper Kitchen — Cocina saludable al rescate" fetchpriority="high">
+<a class="nav__account" href="#cuenta" aria-label="Inicia sesión, próximamente"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2z"/></svg><span>Inicia<br>sesión</span></a>
+</header>
+<img class="hero__logo" src="./assets/logo-estrella-tagline.png" alt="" fetchpriority="high">
+<img class="hero__chef" src="./assets/chef-principal-hero.png" alt="Chef Súper Kitchen presentando su cocina" fetchpriority="high">
+<div class="hero__food-window"><img class="hero__food" src="./assets/teriyaki-recorte.webp" alt="Teriyaki de pollo con arroz y vegetales" fetchpriority="high"></div>
+<div class="hero__actions">
+<a class="cta cta--menu" href="#menu" aria-label="Ver menú">VER MENÚ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg></a>
+<a class="cta cta--wa" href="https://wa.me/526442561819" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.3 8.3 0 0 1-12.3 7.2L3 20l1.2-5A8.3 8.3 0 1 1 20.5 11.7ZM8.6 8.2c.2-.5.5-.5.8-.5h.4c.2 0 .3.1.4.4l.6 1.5c.1.2.1.4 0 .5l-.5.7c-.2.2-.2.3-.1.5.2.4.7 1.1 1.3 1.6.7.6 1.3.8 1.7 1 .2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.4.7c.2.1.4.2.4.4 0 .2-.1 1-.7 1.4-.5.4-1 .5-1.6.3-.7-.2-1.6-.5-2.7-1.4-1-.8-1.8-1.8-2.1-2.4-.3-.6-.8-1.6-.1-2.6.1-.3.3-.7.5-1Z"/></svg><span>Haz tu pedido<br>por WhatsApp</span></a>
+<a class="hero__explore" href="#menu">Explora el menú <span class="scroll-arrows" aria-hidden="true"><svg viewBox="0 0 24 18"><path d="m3 4 9 9 9-9"/></svg><svg viewBox="0 0 24 18"><path d="m3 4 9 9 9-9"/></svg></span></a>
+</div>
+</section>
+<section class="catalog-next catalog" id="menu" aria-label="Catálogo interactivo">
+<div class="catalog__top-art" aria-hidden="true"></div>
+<div class="catalog-header" id="catalog-header" aria-label="Navegación del catálogo">
+<button class="catalog-header__button" id="catalog-menu-button" type="button" aria-label="Ir a las categorías"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<img class="catalog-header__logo" src="./assets/logo-estrella-tagline.png" alt="Súper Kitchen" width="126" height="56">
+<button class="catalog-header__cart" id="open-cart" type="button" aria-label="Abrir mi pedido"><img src="../Recursos/SK_assets_clickson/iconos/carrito.svg" alt=""><span class="catalog-header__count" id="cart-count" hidden>0</span></button>
+</div>
+<div class="catalog__intro">
+<div class="catalog__intro-copy"><h2><span>ELIGE TU</span><span>ANTOJO</span></h2><span class="catalog__underline" aria-hidden="true"></span></div>
+<img class="catalog__mascot" id="catalog-mascot" alt="Chef Súper Kitchen disfrutando su platillo" width="1080" height="1080" fetchpriority="high">
+</div>
+<aside class="catalog__account" aria-label="Acceso a tu cuenta"><img src="../Recursos/SK_assets_clickson/iconos/usuario.svg" alt=""><div><strong>INICIA SESIÓN</strong><span>Acumula puntos canjeables</span><small id="account-status" aria-live="polite">Acceso en preparación</small></div><button type="button" id="login-button">INGRESA <span aria-hidden="true">›</span></button></aside>
+<label class="catalog__search"><img src="../Recursos/SK_assets_clickson/iconos/buscar.svg" alt=""><input id="catalog-search" type="search" placeholder="Buscar en el menú…" autocomplete="off"><button id="clear-search" type="button" aria-label="Limpiar búsqueda" hidden>×</button></label>
+<nav class="category-list" id="category-list" aria-label="Categorías del menú"></nav>
+<section class="product-section" id="product-section" hidden aria-live="polite"><div class="product-section__heading"><div><p class="catalog__eyebrow">MENÚ OFICIAL</p><h3 id="product-category-title"></h3></div><button class="category-close" id="close-category" type="button">Cerrar categoría</button></div><div class="product-grid" id="product-grid"></div></section>
+<section class="plans-section" id="planes" aria-labelledby="plans-title">
+<header class="plans-section__heading"><p>ALIMENTACIÓN A TU RITMO</p><h2 id="plans-title">CONOCE NUESTROS PLANES</h2><span>Sin suscripciones ni fechas fijas</span></header>
+<div class="plans-grid">
+<article class="plan-card plan-card--green"><p>PLAN 1</p><strong>5</strong><span>Platillos y obtienes un</span><b>10%</b><span>de descuento</span></article>
+<article class="plan-card plan-card--yellow"><p>PLAN 2</p><strong>10</strong><span>Platillos y obtienes un</span><b>15%</b><span>de descuento</span></article>
+</div>
+<a class="plans-section__cta" href="https://wa.me/526442561819?text=Hola%2C%20quiero%20conocer%20los%20planes%20de%20S%C3%BAper%20Kitchen." target="_blank" rel="noopener noreferrer">CONOCE NUESTROS PLANES <span aria-hidden="true">›</span></a>
+</section>
+<section class="location-section" id="encuentranos" aria-labelledby="location-title">
+<div class="location-section__heading"><p>VISÍTANOS</p><h2 id="location-title">ENCUÉNTRANOS</h2></div>
+<div class="location-card"><iframe title="Mapa de Súper Kitchen en Nainari 210, Ciudad Obregón" src="https://maps.google.com/maps?q=27.4993319,-109.938284&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="location-card__details"><strong>SÚPER KITCHEN</strong><p>Nainari 210, Cd. Obregón</p><p>Lu-Vie 11am–7pm · S-D 11am–5pm</p><a href="https://www.google.com/maps/place/Super+Kitchen/@27.4993319,-109.938284,1008m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86c81500172d0973:0x3d94c8a6845aa1b7!8m2!3d27.4993319!4d-109.938284!16s%2Fg%2F11wc52v5ml!5m1!1e2?entry=ttu" target="_blank" rel="noopener noreferrer">CÓMO LLEGAR <span aria-hidden="true">›</span></a></div></div>
+</section>
+<footer class="brand-footer"><div class="brand-footer__identity"><img src="../Recursos/SK_assets_clickson/marca/logo-estrella.png" alt="Súper Kitchen"><p>Cocina saludable al rescate.</p></div><div class="brand-footer__contact"><strong>HORARIO</strong><span>Lu-Vie 11am–7pm</span><span>S-D 11am–5pm</span><a href="https://wa.me/526442561819" target="_blank" rel="noopener noreferrer">WhatsApp 644 256 1819</a><a href="mailto:superkitchenmx@gmail.com">superkitchenmx@gmail.com</a></div><nav class="brand-footer__section-links" aria-label="Secciones"><a href="#planes">Planes</a><a href="#encuentranos">Encuéntranos</a></nav><nav class="brand-footer__social" aria-label="Redes sociales"><a href="https://www.facebook.com/profile.php?id=61568805266708" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/superkitchenmx/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@superkitchenmx" target="_blank" rel="noopener noreferrer">TikTok</a></nav><small>POWERED BY CLICKSON</small></footer>
+</section>
+</main>
+<script>
+document.querySelectorAll('a[href="#menu"]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();document.querySelector('#menu').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});history.replaceState(null,'','#menu')}));
+</script>
+<script src="./catalog.js" defer></script>
+</body>
+</html>

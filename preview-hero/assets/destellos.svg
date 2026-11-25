@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 860" preserveAspectRatio="xMidYMid slice">
+  <g fill="none" stroke="#050505" stroke-width="6" stroke-linecap="round">
+    <path d="M29 252 76 288M51 227 90 275M397 250 354 283M378 225 341 270M407 296 365 311"/>
+  </g>
+  <g fill="#FEE624" stroke="#050505" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M43 407Q45 429 61 430Q45 432 43 452Q40 432 25 430Q41 428 43 407Z"/>
+    <path d="M389 368Q391 385 404 386Q391 388 389 405Q386 388 373 386Q386 384 389 368Z"/>
+  </g>
+</svg>
