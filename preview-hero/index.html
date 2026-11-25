@@ -74,7 +74,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 </header>
 <img class="hero__logo" src="./assets/logo-estrella-tagline.png" alt="" fetchpriority="high">
 <img class="hero__chef" src="./assets/chef-principal-hero.png" alt="Chef Súper Kitchen presentando su cocina" fetchpriority="high">
-<div class="hero__food-window"><img class="hero__food" src="./assets/teriyaki-recorte.webp" alt="Teriyaki de pollo con arroz y vegetales" fetchpriority="high"></div>
+<div class="hero__food-window"><img class="hero__food" src="./assets/teriyaki-recorte-mobile.webp" width="1000" height="1000" alt="Teriyaki de pollo con arroz y vegetales" decoding="async" fetchpriority="high"></div>
 <div class="hero__actions">
 <a class="cta cta--menu" href="#menu" aria-label="Ver menú">VER MENÚ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg></a>
 <a class="cta cta--wa" href="https://wa.me/526442561819" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.3 8.3 0 0 1-12.3 7.2L3 20l1.2-5A8.3 8.3 0 1 1 20.5 11.7ZM8.6 8.2c.2-.5.5-.5.8-.5h.4c.2 0 .3.1.4.4l.6 1.5c.1.2.1.4 0 .5l-.5.7c-.2.2-.2.3-.1.5.2.4.7 1.1 1.3 1.6.7.6 1.3.8 1.7 1 .2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.4.7c.2.1.4.2.4.4 0 .2-.1 1-.7 1.4-.5.4-1 .5-1.6.3-.7-.2-1.6-.5-2.7-1.4-1-.8-1.8-1.8-2.1-2.4-.3-.6-.8-1.6-.1-2.6.1-.3.3-.7.5-1Z"/></svg><span>Haz tu pedido<br>por WhatsApp</span></a>
@@ -111,6 +111,8 @@ button,a{-webkit-tap-highlight-color:transparent}
 <footer class="brand-footer"><div class="brand-footer__identity"><img src="../Recursos/SK_assets_clickson/marca/logo-estrella.png" alt="Súper Kitchen"><p>Cocina saludable al rescate.</p></div><div class="brand-footer__contact"><strong>HORARIO</strong><span>Lu-Vie 11am–7pm</span><span>S-D 11am–5pm</span><a href="https://wa.me/526442561819" target="_blank" rel="noopener noreferrer">WhatsApp 644 256 1819</a><a href="mailto:superkitchenmx@gmail.com">superkitchenmx@gmail.com</a></div><nav class="brand-footer__section-links" aria-label="Secciones"><a href="#planes">Planes</a><a href="#encuentranos">Encuéntranos</a></nav><nav class="brand-footer__social" aria-label="Redes sociales"><a href="https://www.facebook.com/profile.php?id=61568805266708" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/superkitchenmx/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@superkitchenmx" target="_blank" rel="noopener noreferrer">TikTok</a></nav><small>POWERED BY CLICKSON</small></footer>
 </section>
 </main>
+<button class="order-bar" id="order-bar" type="button" aria-label="Ver pedido, $0" hidden><span class="order-bar__label">VER PEDIDO</span><span class="order-bar__details"><small id="order-count">0 productos</small><strong id="order-total">$0</strong></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg></button>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Volver al inicio" title="Volver arriba" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></button>
 <script>
 document.querySelectorAll('a[href="#menu"]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();document.querySelector('#menu').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});history.replaceState(null,'','#menu')}));
 </script>
