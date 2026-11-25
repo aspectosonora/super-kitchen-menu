@@ -1,50 +1,190 @@
-/*
-!/.gitignore
-!/README.md
-!/vercel.json
-!/preview-hero/
-!/Fotos/
-!/Recursos/
-
-/Fotos/*
-!/Fotos/Foto Cuadrada DIDI/
-/Fotos/Foto Cuadrada DIDI/*
-!/Fotos/Foto Cuadrada DIDI/Teriyaki de pollo.png
-!/Fotos/Foto Cuadrada DIDI/Pechuga Grill.png
-!/Fotos/Foto Cuadrada DIDI/Pasta Verde de Pollo.png
-!/Fotos/Foto Cuadrada DIDI/Ensalada de Pollo.png
-!/Fotos/Foto Cuadrada DIDI/Tiradito de Atún.png
-!/Fotos/Foto Cuadrada DIDI/Bowl de Pollo.png
-!/Fotos/Foto Cuadrada DIDI/Teribowl.png
-!/Fotos/Foto Cuadrada DIDI/Spicy Bowl.png
-!/Fotos/Foto Cuadrada DIDI/Chipotle Bowl.png
-!/Fotos/Foto Cuadrada DIDI/Green Bowl.png
-!/Fotos/Foto Cuadrada DIDI/Bowl de Atún.png
-!/Fotos/Foto Cuadrada DIDI/Bebidas.png
-
-/Recursos/*
-!/Recursos/SK_assets_clickson/
-/Recursos/SK_assets_clickson/*
-!/Recursos/SK_assets_clickson/iconos/
-!/Recursos/SK_assets_clickson/iconos/*
-!/Recursos/SK_assets_clickson/productos/
-/Recursos/SK_assets_clickson/productos/*
-!/Recursos/SK_assets_clickson/productos/pollo-papas-chipotle.webp
-!/Recursos/SK_assets_clickson/productos/ceviche-atun.webp
-!/Recursos/SK_assets_clickson/productos/bebidas.webp
-!/Recursos/SK_assets_clickson/productos/aderezo-chipotle.webp
-!/Recursos/SK_assets_clickson/mascota/
-/Recursos/SK_assets_clickson/mascota/*
-!/Recursos/SK_assets_clickson/mascota/chef-principal.png
-!/Recursos/SK_assets_clickson/marca/
-/Recursos/SK_assets_clickson/marca/*
-!/Recursos/SK_assets_clickson/marca/logo-estrella.png
-!/Recursos/Recursos Externos SK/
-/Recursos/Recursos Externos SK/*
-!/Recursos/Recursos Externos SK/Personaje/
-/Recursos/Recursos Externos SK/Personaje/*
-!/Recursos/Recursos Externos SK/Personaje/Stickers/
-/Recursos/Recursos Externos SK/Personaje/Stickers/*
-!/Recursos/Recursos Externos SK/Personaje/Stickers/12-B.png
-.vercel
-.env*
+# Exclude local-only files; deployed assets stay in the GitHub allowlist.
+.env.local
+Aplicación Súper Kitchen_ pedido saludable.png
+cotizacion-superkitchen.html
+cotizacion-superkitchen.pdf
+DIAGNOSTICO_CODEX_DESKTOP.md
+Fotos/Foto Cuadrada DIDI/16.png
+Fotos/Foto Cuadrada DIDI/21.png
+Fotos/Foto Cuadrada DIDI/29.png
+Fotos/Foto Cuadrada DIDI/Aderezo Chipotle.png
+Fotos/Foto Cuadrada DIDI/Aderezo Ranch.png
+Fotos/Foto Cuadrada DIDI/Aderezo Teriyaki.png
+Fotos/Foto Cuadrada DIDI/Bowl de Res.png
+Fotos/Foto Cuadrada DIDI/Ceviche de atún.png
+Fotos/Foto Cuadrada DIDI/Ensalada de Atún Sellado.png
+Fotos/Foto Cuadrada DIDI/Ensalada de Res.png
+Fotos/Foto Cuadrada DIDI/Foto cuadrada DIDI .psd
+Fotos/Foto Cuadrada DIDI/Jugo Verde.png
+Fotos/Foto Cuadrada DIDI/Licuado Fresa.png
+Fotos/Foto Cuadrada DIDI/Licuado Plátano.png
+Fotos/Foto Cuadrada DIDI/Pasta Chipotle de Pollo.png
+Fotos/Foto Cuadrada DIDI/Pasta teriyaki de Res.png
+Fotos/Foto Cuadrada DIDI/Pollo con papas a la brava.png
+Fotos/Foto Cuadrada DIDI/Pollo con papas a la chipotle.png
+Fotos/Foto Cuadrada DIDI/Pollo con papas a la verde.png
+Fotos/Foto Cuadrada DIDI/Sandwich de  Huevo.png
+Fotos/Foto Cuadrada DIDI/Sandwich de Huevo.png
+Fotos/Foto Cuadrada DIDI/Sandwich de Queso.png
+Fotos/Foto Cuadrada DIDI/Super Chicken.png
+Fotos/Foto Cuadrada DIDI/Teriyaki de Res.png
+LOGO SUPER KITCHEN.png
+Menu_Super_Kitchen.docx
+Recursos/Recursos Externos SK/Copy of Manual de Identidad - Súper Kitchen.pdf
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Guía-basica-1tinta.png
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Guía-basica-color.png
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Personaje 3D/autoadjusted.jpeg
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Personaje 3D/Modelo-SK-3D.png
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Playera.png
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Post-SK-2026-2.PNG
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Post-SK-2026-3.PNG
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Post-SK-2026-4.PNG
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Sin-título-1.png
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Sin-título-2.png
+Recursos/Recursos Externos SK/Ejemplos aplicaciones/Vistas-Personaje.png
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5740.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5742.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5746.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5749.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5754.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5757.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5768.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5771.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5779.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5783.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5787.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5789.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5808.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5810.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5813.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5815.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5818.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5824.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5827.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5829.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5834.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5919.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5921.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5924.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5928.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5937.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5940.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5942.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5949.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5952.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5957.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5960.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5963.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5968.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5975.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5981.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5985.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5988.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_5990.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6033.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6036.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6039.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6040.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6042.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6052.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6053.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6054.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6057.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6060.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6061.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6065.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6067.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6069.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6075.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6078.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6081.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6082.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6095.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6099.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6101.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6105.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6112.jpg
+Recursos/Recursos Externos SK/Fotos Comida/IMG_6114.jpg
+Recursos/Recursos Externos SK/Fuentes/Copy of bahnschrift.ttf
+Recursos/Recursos Externos SK/Fuentes/Copy of Bungee-Regular.ttf
+Recursos/Recursos Externos SK/Logo/Escudo/SK-Escudo-Blanco.png
+Recursos/Recursos Externos SK/Logo/Escudo/SK-Escudo-Color (1).png
+Recursos/Recursos Externos SK/Logo/Escudo/SK-Escudo-Negro (1).png
+Recursos/Recursos Externos SK/Logo/Logo Super Kitchen.ai
+Recursos/Recursos Externos SK/Logo/Logotipo para fondo oscuro (outline)/SK-Logotipo (1).png
+Recursos/Recursos Externos SK/Logo/Logotipo para fondo oscuro (outline)/SK-Logotipo-con-tagline (2).png
+Recursos/Recursos Externos SK/Logo/SK-Emblema-circular.png
+Recursos/Recursos Externos SK/Logo/SK-Logotipo-con-tagline (1).png
+Recursos/Recursos Externos SK/Logo/SK-Logotipo.png
+Recursos/Recursos Externos SK/Personaje/Personaje-(versión-alternativa).png
+Recursos/Recursos Externos SK/Personaje/Personaje.png
+Recursos/Recursos Externos SK/Personaje/SK-Gestos-y-yPoses.png
+Recursos/Recursos Externos SK/Personaje/Stickers/01.png
+Recursos/Recursos Externos SK/Personaje/Stickers/02.png
+Recursos/Recursos Externos SK/Personaje/Stickers/03.png
+Recursos/Recursos Externos SK/Personaje/Stickers/04.png
+Recursos/Recursos Externos SK/Personaje/Stickers/05.png
+Recursos/Recursos Externos SK/Personaje/Stickers/06.png
+Recursos/Recursos Externos SK/Personaje/Stickers/07.png
+Recursos/Recursos Externos SK/Personaje/Stickers/08.png
+Recursos/Recursos Externos SK/Personaje/Stickers/09.png
+Recursos/Recursos Externos SK/Personaje/Stickers/10.png
+Recursos/Recursos Externos SK/Personaje/Stickers/11.png
+Recursos/Recursos Externos SK/Personaje/Stickers/12.png
+Recursos/Recursos Externos SK/Personaje/Stickers/13-B.png
+Recursos/Recursos Externos SK/Personaje/Stickers/13.png
+Recursos/Recursos Externos SK/Personaje/Stickers/14-B.png
+Recursos/Recursos Externos SK/Personaje/Stickers/14.png
+Recursos/Recursos Externos SK/Personaje/Stickers/15-B.png
+Recursos/Recursos Externos SK/Personaje/Stickers/15.png
+Recursos/Recursos Externos SK/Personaje/Stickers/16.png
+Recursos/Recursos Externos SK/Personaje/Stickers/17.png
+Recursos/Recursos Externos SK/Personaje/Stickers/18.png
+Recursos/Recursos Externos SK/Personaje/Stickers/19.png
+Recursos/Recursos Externos SK/Personaje/Stickers/20.png
+Recursos/Recursos Externos SK/Personaje/Vistas-Personaje.png
+Recursos/SK_assets_clickson/hero/destellos.png
+Recursos/SK_assets_clickson/hero/destellos.svg
+Recursos/SK_assets_clickson/hero/fondo.png
+Recursos/SK_assets_clickson/hero/fondo.svg
+Recursos/SK_assets_clickson/hero/teriyaki-recorte.webp
+Recursos/SK_assets_clickson/LEEME-CODEX.md
+Recursos/SK_assets_clickson/marca/emblema.png
+Recursos/SK_assets_clickson/marca/logo-estrella-tagline.png
+Recursos/SK_assets_clickson/mascota/chef-alternativo.png
+Recursos/SK_assets_clickson/mascota/chef-celebra.png
+Recursos/SK_assets_clickson/mascota/chef-pensativo.png
+Recursos/SK_assets_clickson/mascota/chef-senala.png
+Recursos/SK_assets_clickson/productos/ensalada-atun-sellado.webp
+Recursos/SK_assets_clickson/productos/pasta-teriyaki-res.webp
+Recursos/SK_assets_clickson/productos/teriyaki-pollo.webp
+Recursos/SK_assets_clickson/referencia/4-pantallas.jpg
+Recursos/SK_assets_clickson/referencia/hero-referencia.png
+Recursos/SK_assets_clickson/referencia/Menu_Super_Kitchen.docx
+respaldo-ajuste-jerarquia-superior-2026-11-25/catalog.css
+respaldo-ajustes-catalogo-2026-11-25/catalog.css
+respaldo-ajustes-catalogo-2026-11-25/catalog.js
+respaldo-ajustes-catalogo-2026-11-25/index.html
+respaldo-ajustes-catalogo-2026-11-25b/catalog.css
+respaldo-ajustes-catalogo-2026-11-25b/catalog.js
+respaldo-ajustes-catalogo-2026-11-25b/index.html
+respaldo-catalogo-2026-11-25/catalog.css
+respaldo-catalogo-2026-11-25/catalog.js
+respaldo-catalogo-2026-11-25/index.html
+respaldo-checkout-ubicacion-planes-2026-11-25/catalog.css
+respaldo-checkout-ubicacion-planes-2026-11-25/catalog.js
+respaldo-checkout-ubicacion-planes-2026-11-25/index.html
+respaldo-espaciado-catalogo-2026-11-25/catalog.css
+respaldo-hero-aprobado/assets/Bahnschrift.ttf
+respaldo-hero-aprobado/assets/Bungee-Regular.ttf
+respaldo-hero-aprobado/assets/chef-principal-hero.png
+respaldo-hero-aprobado/assets/chef-principal.png
+respaldo-hero-aprobado/assets/destellos_derecha.svg
+respaldo-hero-aprobado/assets/destellos_izquierda.svg
+respaldo-hero-aprobado/assets/destellos.svg
+respaldo-hero-aprobado/assets/fondo.svg
+respaldo-hero-aprobado/assets/logo-estrella-tagline.png
+respaldo-hero-aprobado/assets/teriyaki-recorte.webp
+respaldo-hero-aprobado/index.html
+respaldo-integracion-hero-catalogo-2026-11-25/catalog.css
+respaldo-snap-catalogo-2026-11-25/catalog.css
