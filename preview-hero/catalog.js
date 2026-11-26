@@ -21,8 +21,8 @@
     {id:"green-bowl",category:"Bowls",name:"Green Bowl",description:"Green Bowl de pollo.",image:photos+"Green Bowl.png",choices:[],price:139},
     {id:"extra-proteina",category:"Extras",name:"Porción extra de proteína",description:"Elige pollo, res o atún.",image:photos+"Bowl de Atún.png",choices:[{label:"Proteína",options:[["Pollo",39],["Res",49],["Atún",49]]}]},
     {id:"bebida-500",category:"Bebidas",name:"Bebida 500 ml",description:"Limonada, té o Jamaica sin azúcar (Stevia).",image:productPhotos+"bebidas.webp",choices:[{label:"Bebida",options:[["Limonada"],["Té"],["Jamaica sin azúcar (Stevia)"]]}],price:35},
-    {id:"coca-355",category:"Bebidas",name:"Coca Cola 355 ml",description:"Coca Cola Zero o Light.",image:photos+"Bebidas.png",choices:[{label:"Variante",options:[["Zero"],["Light"]]}],price:35},
-    {id:"coca-600",category:"Bebidas",name:"Coca Cola 600 ml",description:"Coca Cola Zero o Light.",image:photos+"Bebidas.png",choices:[{label:"Variante",options:[["Zero"],["Light"]]}],price:35},
+    {id:"coca-355",category:"Bebidas",name:"Coca Cola 355 ml",description:"Coca Cola Zero o Light.",image:"./assets/coca-cola-355.webp",imageFit:"contain",choices:[{label:"Variante",options:[["Zero"],["Light"]]}],price:35},
+    {id:"coca-600",category:"Bebidas",name:"Coca Cola 600 ml",description:"Coca Cola Zero o Light.",image:"./assets/coca-cola-zero.webp",imageFit:"contain",choices:[{label:"Variante",options:[["Zero"],["Light"]]}],price:35},
     {id:"aderezo",category:"Aderezos",name:"Aderezo embotellado",description:"Aderezo para llevar. Sabores: Teriyaki, Ranch o Chipotle.",image:productPhotos+"aderezo-chipotle.webp",choices:[{label:"Sabor",options:[["Teriyaki"],["Ranch"],["Chipotle"]]}],price:99}
   ];
   const categories = [
@@ -86,7 +86,7 @@
     productGrid.innerHTML = list.length ? list.map((item) => {
       const price = minimumPrice(item);
       const label = price === null ? "Consultar" : `${item.choices.some((group) => group.options.some((option) => Number.isFinite(option[1]))) ? "Desde " : ""}${money(price)}`;
-      return `<article class="product-card" data-product-card="${item.id}" tabindex="0" role="button" aria-label="Ver ${escapeHtml(item.name)}${price === null ? "" : `, ${label}`}" aria-haspopup="dialog"><div class="product-card__image"><img src="${item.image}" alt="${escapeHtml(item.name)}" loading="lazy"></div><div class="product-card__shade"></div><div class="product-card__body"><h4>${escapeHtml(item.name)}</h4><div class="product-card__bottom"><strong class="product-card__price">${label}</strong><span class="product-card__open" aria-hidden="true"><img src="${icon("flecha")}" alt=""></span></div></div></article>`;
+      return `<article class="product-card${item.imageFit === "contain" ? " product-card--contain" : ""}" data-product-card="${item.id}" tabindex="0" role="button" aria-label="Ver ${escapeHtml(item.name)}${price === null ? "" : `, ${label}`}" aria-haspopup="dialog"><div class="product-card__image"><img src="${item.image}" alt="${escapeHtml(item.name)}" loading="lazy" decoding="async"></div><div class="product-card__shade"></div><div class="product-card__body"><h4>${escapeHtml(item.name)}</h4><div class="product-card__bottom"><strong class="product-card__price">${label}</strong><span class="product-card__open" aria-hidden="true"><img src="${icon("flecha")}" alt=""></span></div></div></article>`;
     }).join("") : `<p class="catalog__empty">${search.value.trim()?"No encontramos coincidencias.":"Elige una categoría para ver sus platillos."}</p>`;
     productSection.hidden = false;
     productGrid.querySelectorAll("[data-product-card]").forEach((card) => {
@@ -133,6 +133,7 @@
   function openProduct(id) {
     activeProduct = products.find((item) => item.id === id); if (!activeProduct) return;
     modalQuantity = 1;
+    $(".product-modal__hero",modal).classList.toggle("product-modal__hero--contain",activeProduct.imageFit === "contain");
     $("#modal-image",modal).src = activeProduct.image; $("#modal-image",modal).alt = activeProduct.name;
     $("#modal-name",modal).textContent = activeProduct.name; $("#modal-description",modal).textContent = activeProduct.description;
     $("#modal-notes",modal).value = ""; $("#modal-quantity",modal).textContent = modalQuantity;
